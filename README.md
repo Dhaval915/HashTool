@@ -59,7 +59,7 @@ Select :
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Hash-Tool.git
+git clone https://github.com/Dhaval915/Hash-Tool.git
 ```
 
 Go to the project directory:
