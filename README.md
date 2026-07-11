@@ -59,13 +59,13 @@ Select :
 Clone the repository:
 
 ```bash
-git clone https://github.com/Dhaval915/Hash-Tool.git
+git clone https://github.com/Dhaval915/HashTool.git
 ```
 
 Go to the project directory:
 
 ```bash
-cd Hash-Tool
+cd HashTool
 ```
 
 Run the program:
