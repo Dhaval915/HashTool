@@ -1,11 +1,13 @@
 import hashlib
 import string
 
-print("""
-========================================
-===== HASH GENERATOR & IDENTIFIER ======
-========================================
-""")
+WIDTH = 50
+TITLE = "HASH GENERATOR & IDENTIFIER"
+
+print()
+print("=" * WIDTH)
+print(TITLE.center(WIDTH))
+print("=" * WIDTH)
 while True:
 
     sel = input("\n1. Generate Hash\n2. Identify Hash Type\n3. Exit\nSelect : ").strip()
@@ -81,7 +83,7 @@ while True:
                 }
 
                 if length in hash_types:
-                    print("============ HASH INFORMATION ============")
+                    print("\n============ HASH INFORMATION ============")
                     print("Hash Length          : ", length)
                     print("Possible Hash Type   : ", hash_types[length])
                 else:
