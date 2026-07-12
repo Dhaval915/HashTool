@@ -3,7 +3,7 @@ import string
 
 print("""
 ========================================
-      HASH GENERATOR & IDENTIFIER
+===== HASH GENERATOR & IDENTIFIER ======
 ========================================
 """)
 while True:
