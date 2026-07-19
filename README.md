@@ -1,13 +1,16 @@
-# 🔐 Hash-Tool
+# 🔐 HashTool
 
-A lightweight Python-based command-line tool to **generate cryptographic hashes** and **identify common hash types**. This project is designed for cybersecurity students, beginners, and anyone interested in learning about hashing algorithms.
+A lightweight **Python-based command-line cybersecurity tool** for generating cryptographic hashes, identifying common hash types, and validating plaintext against hashes.
+
+Designed for cybersecurity students, beginners, and anyone interested in learning cryptographic hashing concepts.
 
 ---
 
 ## ✨ Features
 
-### 🔹 Hash Generator
-Generate hashes for a given plaintext using:
+### 🔹 Generate Hashes
+
+Generate cryptographic hashes for any plaintext using:
 
 - MD5
 - SHA-1
@@ -16,12 +19,15 @@ Generate hashes for a given plaintext using:
 - SHA-384
 - SHA-512
 
-### 🔹 Hash Identifier
-Identify possible hash types based on:
+---
 
-- Hash length
-- Hash prefix (bcrypt & Argon2)
-- Hexadecimal validation
+### 🔹 Identify Hash Types
+
+Identify possible hash types using:
+
+- Hash length analysis
+- Known hash prefixes (bcrypt & Argon2)
+- Hexadecimal format validation
 
 Supported hash types:
 
@@ -39,16 +45,49 @@ Supported hash types:
 
 ---
 
+### 🔹 Validate Plaintext Against Hash
+
+Verify whether a plaintext matches a supplied hash.
+
+The tool:
+
+- Generates hashes for the entered plaintext
+- Compares them against the supplied hash
+- Displays the matching algorithm (if found)
+
+---
+
+### 🔹 Input Validation
+
+- Detects empty input
+- Validates hexadecimal hashes
+- Supports bcrypt and Argon2 prefixes
+- Handles invalid input gracefully
+
+---
+
+### 🔹 Graceful Exit
+
+Supports clean program termination using:
+
+- `Ctrl + C` (KeyboardInterrupt)
+- `Ctrl + D` (Linux/macOS)
+- `Ctrl + Z` then `Enter` (Windows)
+
+---
+
 ## 📸 Preview
 
 ```text
-========================================
-      HASH GENERATOR & IDENTIFIER
-========================================
+==================================================
+            HASH GENERATOR & IDENTIFIER
+==================================================
 
-1. Generate Hash
-2. Identify Hash Type
-3. Exit
+[1] Generate Hash
+[2] Identify Hash Type
+[3] Validate Plaintext Against Hash
+[4] Exit
+
 Select :
 ```
 
@@ -76,7 +115,7 @@ python hash.py
 
 ---
 
-## 🖥️ Example
+## 🖥️ Examples
 
 ### Generate Hash
 
@@ -95,7 +134,7 @@ SHA-512  : 9b71d224bd62f378...
 
 ---
 
-### Identify Hash
+### Identify Hash Type
 
 ```text
 Enter Hash Value:
@@ -103,28 +142,45 @@ Enter Hash Value:
 
 ============ HASH INFORMATION ============
 
-Hash Length        : 32
-Possible Hash Type : MD5 / NTLM / LM / MD4
+Hash Length   : 32
+Possible Type : MD5 / NTLM / LM / MD4
 ```
 
 ---
 
-## 📚 Hash Types
+### Validate Hash
 
-| Algorithm | Length |
-|-----------|--------|
-| MD5 | 32 |
-| SHA-1 | 40 |
-| SHA-224 | 56 |
-| SHA-256 | 64 |
-| SHA-384 | 96 |
-| SHA-512 | 128 |
-| bcrypt | Prefix: `$2a$`, `$2b$`, `$2y$` |
-| Argon2 | Prefix: `$argon2` |
+```text
+Enter Plaintext Value: hello
+
+Enter Hash Value:
+5d41402abc4b2a76b9719d911017c592
+
+Status         : Match Found
+Algorithm      : MD5
+```
 
 ---
 
-## ⚠️ Note
+## 📚 Supported Hash Types
+
+| Algorithm | Identification Method |
+|-----------|-----------------------|
+| MD5 | Length (32) |
+| SHA-1 | Length (40) |
+| SHA-224 | Length (56) |
+| SHA-256 | Length (64) |
+| SHA-384 | Length (96) |
+| SHA-512 | Length (128) |
+| NTLM | Possible (32) |
+| LM | Possible (32) |
+| MD4 | Possible (32) |
+| bcrypt | Prefix (`$2a$`, `$2b$`, `$2y$`) |
+| Argon2 | Prefix (`$argon2`) |
+
+---
+
+## ⚠️ Limitations
 
 Hash identification is based on:
 
@@ -132,7 +188,9 @@ Hash identification is based on:
 - Known prefixes
 - Input format
 
-Some algorithms (such as **MD5**, **NTLM**, **LM**, and **MD4**) produce hashes of the same length, so the exact algorithm cannot always be determined from the hash value alone.
+Some algorithms (such as **MD5**, **NTLM**, **LM**, and **MD4**) generate hashes with the same length. Because of this, the tool reports the **possible** hash type rather than claiming an exact algorithm.
+
+Hash validation compares a supplied plaintext against hashes generated using the supported algorithms. It **does not** perform password cracking or reverse hashing.
 
 ---
 
@@ -146,24 +204,55 @@ Some algorithms (such as **MD5**, **NTLM**, **LM**, and **MD4**) produce hashes 
 
 ## 🎯 Learning Objectives
 
-This project helps you understand:
+This project demonstrates:
 
-- Cryptographic hashing
+- Cryptographic hashing fundamentals
 - Common hashing algorithms
 - Password hashing formats
 - Hash identification techniques
-- Python programming fundamentals
+- Plaintext hash validation
+- Python dictionaries and functions
+- Command-line application development
+- Input validation
+- Exception handling
+
+---
+
+## 📁 Project Structure
+
+```
+HashTool/
+│
+├── hash.py
+├── README.md
+└── LICENSE
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions, suggestions, and improvements are welcome.
+
+1. Fork the repository
+2. Create a new branch
+3. Make your changes
+4. Submit a Pull Request
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
 
 ---
 
 ## 👨‍💻 Author
 
-Developed by **Dhaval Suthar**
+**Dhaval Suthar**
 
-⭐ If you found this project useful, consider giving it a star!
+- GitHub: https://github.com/Dhaval915
+
+---
+
+⭐ **If you found this project useful, consider giving it a star!**
