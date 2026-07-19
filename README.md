@@ -12,9 +12,9 @@ Designed for cybersecurity students, beginners, and anyone interested in learnin
 
 ## ✨ Features
 
-### 🔹 Generate Hashes
+### 🔹 Generate File Hashes
 
-Generate cryptographic hashes for any plaintext using:
+Generate cryptographic hashes for any file using:
 
 - MD5
 - SHA-1
@@ -22,6 +22,8 @@ Generate cryptographic hashes for any plaintext using:
 - SHA-256
 - SHA-384
 - SHA-512
+
+The tool reads the selected file and calculates its hashes using Python's standard `hashlib` library.
 
 ---
 
@@ -66,6 +68,7 @@ The tool:
 - Detects empty input
 - Validates hexadecimal hashes
 - Supports bcrypt and Argon2 prefixes
+- Validates file paths before hashing
 - Handles invalid input gracefully
 
 ---
@@ -84,13 +87,14 @@ Supports clean program termination using:
 
 ```text
 ==================================================
-            HASH GENERATOR & IDENTIFIER
+        HASH GENERATOR & IDENTIFIER
 ==================================================
 
 [1] Generate Hash
 [2] Identify Hash Type
 [3] Validate Plaintext Against Hash
-[4] Exit
+[4] Check File
+[5] Exit
 
 Select :
 ```
@@ -166,6 +170,24 @@ Algorithm      : MD5
 
 ---
 
+### Check File
+
+```text
+Enter File Path:
+C:\Users\Dhaval\Documents\example.txt
+
+========== FILE HASHES ==========
+
+MD5      : b10a8db164e0754105b7a99be72e3fe5
+SHA-1    : 0a4d55a8d778e5022fab701977c5d840bbc486d0
+SHA-224  : ...
+SHA-256  : ...
+SHA-384  : ...
+SHA-512  : ...
+```
+
+```
+
 ## 📚 Supported Hash Types
 
 | Algorithm | Identification Method |
@@ -202,6 +224,7 @@ This project is intended for **educational purposes** and to demonstrate cryptog
 - Python Standard Library
   - hashlib
   - string
+  - os
 
 ---
 
@@ -211,6 +234,7 @@ This project demonstrates:
 
 - Python functions
 - Python dictionaries
+- File handling
 - Input validation
 - Exception handling
 - Command-line application development
@@ -219,6 +243,21 @@ This project demonstrates:
 - Password hashing formats
 - Hash identification techniques
 - Plaintext hash validation
+- File hash generation
+
+---
+
+## 🚀 Future Improvements
+
+Planned enhancements include:
+
+- SHA3 (SHA3-224, SHA3-256, SHA3-384, SHA3-512) support
+- BLAKE2 hashing support
+- File integrity verification using known hashes
+- Batch file hashing
+- Export results to TXT or CSV
+- Colored terminal output
+- Additional hash identification heuristics
 
 ---
 
