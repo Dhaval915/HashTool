@@ -25,7 +25,7 @@ Generate cryptographic hashes for any plaintext using:
 
 ---
 
-### 🔹 Identify Hash Types
+### 🔹 Identify Possible Hash Types
 
 Identify possible hash types using:
 
