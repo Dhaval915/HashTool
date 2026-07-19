@@ -12,6 +12,19 @@ Designed for cybersecurity students, beginners, and anyone interested in learnin
 
 ## ✨ Features
 
+### 🔹 Generate Hashes
+
+Generate cryptographic hashes for any plaintext using:
+
+- MD5
+- SHA-1
+- SHA-224
+- SHA-256
+- SHA-384
+- SHA-512
+
+---
+
 ### 🔹 Generate File Hashes
 
 Generate cryptographic hashes for any file using:
@@ -184,8 +197,6 @@ SHA-224  : ...
 SHA-256  : ...
 SHA-384  : ...
 SHA-512  : ...
-```
-
 ```
 
 ## 📚 Supported Hash Types
