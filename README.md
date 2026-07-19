@@ -185,16 +185,14 @@ Algorithm      : MD5
 ---
 
 ## ⚠️ Limitations
-
-Hash identification is based on:
-
-- Hash length
-- Known prefixes
-- Input format
-
-Some algorithms (such as **MD5**, **NTLM**, **LM**, and **MD4**) generate hashes with the same length. Because of this, the tool reports the **possible** hash type rather than claiming an exact algorithm.
-
+...
 Hash validation compares a supplied plaintext against hashes generated using the supported algorithms. It **does not** perform password cracking or reverse hashing.
+
+---
+
+## 📢 Disclaimer
+
+This project is intended for **educational and learning purposes only**. It demonstrates cryptographic hashing, hash identification techniques, and Python programming concepts. It is **not** intended for password cracking, bypassing authentication, or any unauthorized activity.
 
 ---
 
