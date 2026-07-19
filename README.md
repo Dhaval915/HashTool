@@ -185,22 +185,23 @@ Algorithm      : MD5
 ---
 
 ## ⚠️ Limitations
-...
-Hash validation compares a supplied plaintext against hashes generated using the supported algorithms. It **does not** perform password cracking or reverse hashing.
+
+Hash validation compares a supplied plaintext against hashes generated using the supported algorithms. It does **not** perform password cracking, reverse hashing, or brute-force attacks.
 
 ---
 
 ## 📢 Disclaimer
 
-This project is intended for **educational and learning purposes only**. It demonstrates cryptographic hashing, hash identification techniques, and Python programming concepts. It is **not** intended for password cracking, bypassing authentication, or any unauthorized activity.
+This project is intended for **educational purposes** and to demonstrate cryptographic hashing, hash identification, and Python programming concepts. It is **not** intended for password cracking, bypassing authentication, or any unauthorized activity.
 
 ---
 
 ## 🛠️ Built With
 
 - Python 3
-- hashlib
-- string
+- Python Standard Library
+  - hashlib
+  - string
 
 ---
 
@@ -208,15 +209,16 @@ This project is intended for **educational and learning purposes only**. It demo
 
 This project demonstrates:
 
+- Python functions
+- Python dictionaries
+- Input validation
+- Exception handling
+- Command-line application development
 - Cryptographic hashing fundamentals
 - Common hashing algorithms
 - Password hashing formats
 - Hash identification techniques
 - Plaintext hash validation
-- Python dictionaries and functions
-- Command-line application development
-- Input validation
-- Exception handling
 
 ---
 
@@ -234,7 +236,7 @@ HashTool/
 
 ## 🤝 Contributing
 
-Contributions, suggestions, and improvements are welcome.
+Contributions, suggestions, bug reports, and improvements are welcome.
 
 1. Fork the repository
 2. Create a new branch
@@ -254,6 +256,7 @@ This project is licensed under the **MIT License**.
 **Dhaval Suthar**
 
 - GitHub: https://github.com/Dhaval915
+- LinkedIn: https://linkedin.com/in/thedhaval
 
 ---
 
